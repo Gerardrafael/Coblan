@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artistas Promotor de Espectáculos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: white;
+        }
+
+        nav {
+            background-color: #2E4053;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+        }
+
+        .menu li {
+            margin: 0 15px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            color: yellow;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                background-color: #ff5733;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .menu.active {
+                display: flex;
+            }
+
+            .menu li {
+                padding: 15px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">PROMOTORA "JB"</div>
+        <div class="menu-toggle">&#9776;</div>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="artistas.html">Artistas</a></li>
+            <li><a href="entradas.html">Entradas</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        document.querySelector(".menu-toggle").addEventListener("click", function() {
+            document.querySelector(".menu").classList.toggle("active");
+        });
+    </script>
+
+    <video controls autoplay loop muted width="1400" height="800">
+        <source src="videos/video01.mp4" >
+    </video>
+
+</body>
+</html>
